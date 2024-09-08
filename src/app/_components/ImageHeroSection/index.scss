@@ -1,0 +1,72 @@
+@import '../../_css/common.scss';
+
+.blocks {
+  display: flex;
+  height: 450px;
+  overflow: clip;
+  @include small-break{
+    height: 250px;
+  }
+
+  img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    will-change: filter;
+  }
+
+  .block {
+    container: block/inline-size;
+    flex: 1;
+    margin-right: -20%;
+    clip-path: polygon(20% 0, 100% 0%, 80% 100%, 0% 100%);
+    transition: .25s flex .125s linear;
+    will-change: flex;
+
+    a {
+      position: relative;
+
+      div {
+        position: absolute;
+        bottom: 1rem;
+        left: 1rem;
+        color: #fff;
+        font-size: clamp(12px, 5cqw, 32px);
+        z-index: 2;
+      }
+    }
+
+    &:first-child {
+      img {
+        filter: grayscale(0);
+      }
+    }
+
+    img {
+      filter: grayscale(1);
+    }
+
+    &:hover {
+      flex: 1.25;
+    }
+
+    &:hover img {
+      filter: grayscale(0);
+    }
+
+    &:first-child {
+      clip-path: polygon(0 0, 100% 0%, 80% 100%, 0% 100%);
+    }
+
+    &:last-child {
+      margin-right: -15%;
+      clip-path: polygon(20% 0, 100% 0%, 100% 100%, 0% 100%);
+    }
+  }
+
+  &:has(.block:not(:first-child):hover) {
+    .block:first-child img {
+      filter: grayscale(1);
+    }
+  }
+}

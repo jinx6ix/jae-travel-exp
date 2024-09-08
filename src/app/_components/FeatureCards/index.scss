@@ -1,0 +1,125 @@
+
+.featureComponent{
+    font-size: 15px;
+    font-family: 'Poppins', sans-serif;
+    min-width: 100%;
+    margin: 10px 10px 10px 10px;
+    background-image: url('/assets/images/maps.png');
+    background-size: cover;
+  
+    /* "cover" tells the browser to make sure the image always covers the entire container, in this case html. The browser will cover the container even if it has to stretch the image or cut a little bit off the edges. */
+  
+    background-repeat: no-repeat;
+  
+    /* The browser can also choose to display your background image as tiles depending on its size. To prevent this from happening, use no-repeat: */
+  
+    background-position: center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    z-index: -100;
+}
+.attribution { 
+    font-size: 11px; text-align: center; 
+}
+.attribution a { 
+    color: hsl(228, 45%, 44%); 
+}
+
+
+@media (max-width: 400px) {
+   
+}
+
+.header {
+    text-align: center;
+    line-height: 0.8;
+    margin-bottom: 50px;
+    margin-top: 100px;
+}
+
+.header p {
+    margin: 0 auto;
+    line-height: 2;
+    color: hsl(229, 6%, 66%);
+}
+.paText{
+    color: rgb(26, 25, 25);
+}
+
+.box p {
+    color: hsl(229, 6%, 66%);
+}
+
+.box {
+    border-radius: 5px;
+    box-shadow: 0px 30px 40px -20px hsl(229, 6%, 66%);
+    padding: 10px 30px;
+    margin: 20px;  
+    background-color: white;
+}
+
+.img {
+    float: right;
+}
+
+@media (max-width: 450px) {
+    .box {
+        height: 200px;
+    }
+}
+
+@media (max-width: 950px) and (min-width: 450px) {
+    .box {
+        text-align: center;
+        height: 180px;
+    }
+}
+
+.cyan {
+    border-top: 3px solid hsl(180, 62%, 55%);
+}
+.red {
+    border-top: 3px solid hsl(0, 78%, 62%);
+}
+.blue {
+    border-top: 3px solid hsl(212, 86%, 64%);
+}
+.orange {
+    border-top: 3px solid  hsl(34, 97%, 64%);
+}
+
+.h2Text {
+    color: hsl(234, 12%, 34%);
+    font-weight:  600;
+    font-size: 20px !important;
+}
+.row1-container, .row2-container{
+    width: 100%;
+}
+
+@media (min-width: 950px) {
+    .row1-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .row2-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .box-down {
+        position: relative;
+        top: 150px;
+    }
+    .box {
+        width: 30%;
+     
+    }
+    .header p {
+        width: 30%;
+    }
+    
+}

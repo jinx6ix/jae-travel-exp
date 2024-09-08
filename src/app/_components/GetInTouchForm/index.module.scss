@@ -1,0 +1,14 @@
+.formFlex{
+    display: flex;
+    gap: 5px;
+    justify-content: space-around;
+    
+}
+.formBtn button{
+    padding: 10px 20px;
+    color: white;
+    background-color: rgb(211, 88, 44);
+    border: none;
+    outline: none;
+    border-radius: 5px;
+}

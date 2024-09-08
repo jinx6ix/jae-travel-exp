@@ -44,6 +44,7 @@ const columnFields: Field[] = [
 
 export const Content: Block = {
   slug: 'content',
+  imageURL: 'https://ik.imagekit.io/6cga8hi9z/JaeTravels/Home_SGUqnhNovj.png',
   fields: [
     invertBackground,
     {

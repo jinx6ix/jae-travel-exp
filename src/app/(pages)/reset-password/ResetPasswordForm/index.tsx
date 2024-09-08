@@ -1,8 +1,6 @@
-'use client'
-
 import React, { useCallback, useEffect, useState } from 'react'
 import { useForm } from 'react-hook-form'
-import { useRouter, useSearchParams } from 'next/navigation'
+import { useRouter} from 'next/navigation'
 
 import { Button } from '../../../_components/Button'
 import { Input } from '../../../_components/Input'
@@ -16,12 +14,11 @@ type FormData = {
   token: string
 }
 
-export const ResetPasswordForm: React.FC = () => {
+export const ResetPasswordForm: React.FC<{ token: string | null }> = ({ token }) => {
+
   const [error, setError] = useState('')
   const { login } = useAuth()
   const router = useRouter()
-  const searchParams = useSearchParams()
-  const token = searchParams.get('token')
 
   const {
     register,

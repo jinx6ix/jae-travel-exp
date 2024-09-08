@@ -3,7 +3,7 @@ import React from 'react'
 import { Page } from '../../../payload/payload-types'
 import { Gutter } from '../../_components/Gutter'
 import { CMSLink } from '../../_components/Link'
-import RichText from '../../_components/RichText'
+import RichText from '../../_components/RichTextt'
 
 import classes from './index.module.scss'
 

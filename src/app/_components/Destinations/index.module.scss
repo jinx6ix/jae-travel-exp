@@ -1,0 +1,203 @@
+@use '../../_css/queries.scss' as *;
+
+.CardComponent {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  min-width: 100%;
+  margin: 20px 10px 30px 10px;
+  background-image: url('/assets/images/maps.png');
+  background-size: cover;
+
+  /* "cover" tells the browser to make sure the image always covers the entire container, in this case html. The browser will cover the container even if it has to stretch the image or cut a little bit off the edges. */
+
+  background-repeat: no-repeat;
+
+  /* The browser can also choose to display your background image as tiles depending on its size. To prevent this from happening, use no-repeat: */
+
+  background-position: center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+
+  @include small-break {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(50%, 1fr));
+    gap: 5px;
+    padding: 0;
+    margin: 0;
+  }
+}
+.categoriesText {
+  display: flex;
+  flex-direction: column;
+  color: white;
+}
+
+.categoryHeaderDescr {
+  color: #b8b1b1;
+  font-size: 14px;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  margin-bottom: 10px;
+}
+
+.CategoriesDays {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+}
+
+.freeFormCategory {
+  align-items: center;
+  justify-content: center;
+}
+
+.Text {
+  font-size: 20px;
+  font-weight: 600;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.DestinationFlex {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+// .card {
+//   margin: 10px 0 0 0;
+//   text-align: center;
+//   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+//   border: .5px solid rgba(231, 225, 225, 0.952);
+//   padding: 3px;
+//   border-radius: 10px;
+//   justify-content: center;
+//   align-items: center;
+//   border-radius: 50%;
+//   overflow: hidden;
+//   transition: ease-in-out;
+//   position: relative;
+//   border: 2px solid #b8b1b1;
+//   cursor: pointer;
+//   @include small-break{
+//     border: none;
+//   }
+
+// }
+.card {
+  max-width: 230px;
+  min-width: 230px;
+  max-height: 230px;
+  // border: 1px solid black;
+  min-height: 230px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  @include small-break {
+    max-width: 150px;
+    min-width: 150x;
+    max-height: 150x;
+    min-height: 150x;
+  }
+
+}
+
+.circleWrapper {
+
+  width: 200px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border: .5px solid rgba(231, 225, 225, 0.952);
+  height: 200px;
+
+  border-radius: 50%;
+
+  overflow: hidden;
+  @include small-break{
+    width: 150px;
+    height: 150px;
+  }
+}
+
+.links {
+  text-decoration: none;
+
+}
+
+.destTitle {
+  color: #3f3b3b;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.DestinationFilters {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  font-weight: 500;
+  gap: 15px;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+
+  @include small-break {
+    gap: 5px;
+    flex-wrap: wrap;
+  }
+}
+
+.filter {
+  padding: 5px 10px;
+  border-radius: 10px;
+  background-color: rgb(114, 67, 6);
+  color: white;
+  cursor: pointer;
+
+  @include small-break {
+    padding: 5px 5px;
+    font-size: 12px;
+  }
+}
+
+// .card:hover{
+//   // scale: 1.1;
+
+
+//   @include small-break{
+//     scale: 1;
+//   }
+// }
+.card h3 {
+  margin-top: 10px;
+
+}
+
+.image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+
+  @include small-break {
+    max-width: 150px;
+    min-height: 150px;
+    max-height: 150px;
+    min-width: 150px;
+    overflow: hidden;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0;
+  }
+}
+
+.categoryHeader {
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+}

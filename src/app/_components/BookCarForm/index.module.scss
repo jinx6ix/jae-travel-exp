@@ -1,0 +1,261 @@
+@import '../../_css/common.scss';
+
+.safariBooking {
+    font-family: Arial, sans-serif;
+    margin-top: 20px;
+    background-color: white;
+    color: black !important;
+    padding: 15px 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.bookingContainer {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 20px;
+    gap: 20px;
+    width: 100%;
+}
+.BookingHeader{
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    display: flex;
+    width: 100%;
+    color: #de6c2a;
+}
+.bookingForm {
+    width: 100%; 
+}
+
+.formGroup {
+    margin-bottom: 15px;
+    width: 100%;
+}
+
+.formGroup label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.formGroup input, .formGroup textarea, .select {
+    width: 100%;
+    padding: 15px;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    background-color: #ffffff;
+    color: black;
+}
+
+
+.formGroup input ::placeholder{
+    color: rgb(0, 0, 0);
+}
+.formGroup textarea::placeholder{
+    color: rgb(0, 0, 0);
+    font-weight: 300;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.submitBtn {
+    background-color: #273238;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+.submitBtn:hover {
+    background-color: #de6c2a;
+}
+
+.safariImage {
+    width: 100%;
+}
+.FormImage{
+    border-radius: 10px;
+}
+@media screen and (max-width: 768px) {
+    .bookingContainer {
+        flex-direction: column;
+    }
+
+    .bookingForm, .safariImage {
+        width: 100%;
+    }
+}
+.success{
+    color: #0056b3;
+}
+.error{
+    color: red;
+}
+.select {
+    appearance: none; /* Remove default arrow */
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-repeat: no-repeat;
+  
+}
+.formGroup input::placeholder{
+    color: rgb(0, 0, 0);
+}
+.formGroup select{
+    padding: 15px;
+    background-color: #ffffff;
+    color: rgb(0, 0, 0);
+    border-radius: 8px;
+    width: 100%;
+}
+.flex{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    gap: 20px;
+    @include small-break{
+        gap: 5px ;
+    }
+}
+.radioFlex{
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    width: 100%;
+    gap: 20px;
+    @include small-break{
+        gap: 5px;
+}}
+.checkbox{
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    width: 100%;
+    padding: 10px;
+    flex-direction: row;
+    @include small-break{
+        padding: 2px;
+    }
+}
+.checkbox input[type="radio"] {
+    appearance: none; // Remove default radio button appearance
+    width: 20px; // Adjust the size as needed
+    height: 20px;
+    border-radius: 50%; // Make it a circle
+    border: 2px solid #ccc; // Add a border
+    outline: none; // Remove outline when focused
+    cursor: pointer; // Add a pointer cursor
+    @include small-break{
+        width: 10px;
+        height: 20px;
+    }
+
+    &:checked {
+      border-color: #007bff; // Change the border color when checked
+      background-color: #de6c2a; // Change the background color when checked
+    }
+
+    &:hover {
+      border-color: #007bff; // Change the border color on hover
+    }
+  }
+
+.RadioContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+.Radiobox{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    input[type="checkbox"] {
+        appearance: none; // Remove default checkbox appearance
+        width: 20px; // Adjust the size as needed
+        height: 20px;
+        border: 2px solid #ccc; // Add a border
+        outline: none; // Remove outline when focused
+        cursor: pointer; // Add a pointer cursor
+        position: relative; // Required for the checkmark
+        @include small-break{
+          width: 10px;
+          height: 20px;
+    }
+      
+    &:checked {
+        border-color: #007bff; // Change the border color when checked
+        background-color: #de6c2a; // Change the background color when checked
+  
+        &::after {
+          content: ""; // Add the checkmark
+          position: absolute;
+          left: 8px; // Adjust the position as needed
+          top: 4px; // Adjust the position as needed
+          width: 5px; // Adjust the size of the checkmark
+          height: 10px; // Adjust the size of the checkmark
+          border: solid white; // Change the color of the checkmark
+          border-width: 0 2px 2px 0;
+          transform: rotate(45deg); // Rotate the checkmark
+        }
+      }
+  
+      &:hover {
+        border-color: #007bff; // Change the border color on hover
+      }
+    }
+    
+}
+.checkbox {
+    display: flex;
+    align-items: center;
+    gap: 10px; // Adjust the gap as needed
+  
+    .ratingsize {
+      font-size: 16px; // Adjust the font size as needed
+      font-weight: 600; // Make the text bold or adjust the weight as needed
+    }
+    .ExtraLabel{
+        font-size: 12px; // Adjust the font size as needed
+        color: #273238;
+    }
+  
+    input[type="checkbox"] {
+      appearance: none; // Remove default checkbox appearance
+      width: 20px; // Adjust the size as needed
+      height: 20px;
+      border: 2px solid #ccc; // Add a border
+      outline: none; // Remove outline when focused
+      cursor: pointer; // Add a pointer cursor
+      position: relative; // Required for the checkmark
+      @include small-break{
+        width: 10px;
+        height: 20px;
+    }
+  
+      &:checked {
+        border-color: #007bff; // Change the border color when checked
+        background-color: #de6c2a; // Change the background color when checked
+  
+        &::after {
+          content: ""; // Add the checkmark
+          position: absolute;
+          left: 8px; // Adjust the position as needed
+          top: 4px; // Adjust the position as needed
+          width: 5px; // Adjust the size of the checkmark
+          height: 10px; // Adjust the size of the checkmark
+          border: solid white; // Change the color of the checkmark
+          border-width: 0 4px 4px 0;
+          transform: rotate(45deg); // Rotate the checkmark
+        }
+      }
+  
+      &:hover {
+        border-color: #007bff; // Change the border color on hover
+      }
+    }
+  }

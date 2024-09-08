@@ -31,37 +31,6 @@ export default async function Account() {
       <Gutter>
         <RenderParams className={classes.params} />
       </Gutter>
-      <LowImpactHero
-        type="lowImpact"
-        media={null}
-        richText={[
-          {
-            type: 'h1',
-            children: [
-              {
-                text: 'Account',
-              },
-            ],
-          },
-          {
-            type: 'paragraph',
-            children: [
-              {
-                text: 'This is your account dashboard. Here you can update your account information, view your comment history, and more. To manage all users, ',
-              },
-              {
-                type: 'link',
-                url: '/admin/collections/users',
-                children: [
-                  {
-                    text: 'login to the admin dashboard.',
-                  },
-                ],
-              },
-            ],
-          },
-        ]}
-      />
       <Gutter className={classes.account}>
         <AccountForm />
         <HR />

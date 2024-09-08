@@ -116,6 +116,25 @@ const link: LinkType = ({ appearances, disableLabel = false, overrides = {} } = 
             width: '50%',
           },
         },
+        {
+          name: 'icon',
+          label: 'Icon',
+          type: 'upload',
+          relationTo: 'media',
+        },
+        {
+          name: 'MiniCategories',
+          type: 'relationship',
+          relationTo: 'categories',
+          hasMany: true,
+          filterOptions: ({ id }) => {
+            return {
+              id: {
+                not_in: [id],
+              },
+            }
+          },
+        },
       ],
     })
   } else {

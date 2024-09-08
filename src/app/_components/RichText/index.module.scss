@@ -1,8 +1,17 @@
+@use "../../_css/common.scss" as *;
+
 .richText {
+  @include color-links;
+  
   :first-child {
     margin-top: 0;
   }
+
   :last-child {
     margin-bottom: 0;
+  }
+
+  span {
+    white-space: pre-wrap;
   }
 }

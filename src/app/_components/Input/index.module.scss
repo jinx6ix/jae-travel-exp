@@ -11,8 +11,8 @@
   box-shadow: none;
   border: none;
   background: none;
-  background-color: var(--theme-elevation-100);
-  color: var(--theme-elevation-1000);
+  background-color: #baa57f;
+  color: black;
   height: calc(var(--base) * 2);
   line-height: calc(var(--base) * 2);
   padding: 0 calc(var(--base) / 2);
@@ -24,7 +24,7 @@
   }
 
   &::placeholder {
-    color: var(--theme-elevation-500);
+    color: black;
   }
 
   &:disabled {
@@ -50,11 +50,7 @@
   height: calc(var(--base) * 5);
 }
 
-:global([data-theme="dark"]) {
-  .input {
-    background-color: var(--theme-elevation-150);
-  }
-}
+
 
 .error {
   background-color: var(--theme-error-150);

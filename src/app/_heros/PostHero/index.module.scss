@@ -2,7 +2,11 @@
 
 .postHero {
   display: flex;
-  gap: calc(var(--base) * 2);
+  gap: 5px;
+  width: 100%;
+
+  background-color: white;
+  margin-bottom: 10px;
 
   @include mid-break {
     flex-direction: column;
@@ -11,12 +15,13 @@
 }
 
 .content {
-  width: 50%;
+  width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
-  gap: var(--base);
+  gap: 10px;
+
 
   @include mid-break {
     width: 100%;
@@ -28,6 +33,10 @@
   @extend %label;
   display: flex;
   gap: calc(var(--base) / 2);
+  color: #de6c2a;
+  font-family: 'Times New Roman', Times, serif;
+  // background-color: #b88d5e;
+  padding: 5px;
 }
 
 .title {
@@ -40,6 +49,10 @@
 
 .meta {
   margin: 0;
+  background-color: #e0dfdf;
+  border-radius: 5px;
+  padding: 5px;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
 .description {
@@ -70,6 +83,8 @@
 
 .image {
   object-fit: cover;
+  
+
 }
 
 .placeholder {
@@ -83,4 +98,311 @@
 
 .caption {
   color: var(--theme-elevation-500);
+}
+/* Style for the additional data section */
+.additional-data {
+  margin-top: 20px;
+}
+
+/* Style for the accordion button */
+button.accordion {
+  background-color: #feffff;
+  box-shadow: 0 8px 8px rgba(0, 0, 0, 0.1);
+  color: rgb(0, 0, 0);
+  cursor: pointer;
+  padding: 20px;
+  margin: 2px;
+  width: 100%;
+  text-align: left;
+  border: none;
+  outline: none;
+  transition: background-color 0.3s ease;
+}
+
+/* Style for the active accordion button */
+button.accordion.active {
+  background-color: #e4831b;
+}
+
+/* Style for the accordion content */
+button.accordion + div {
+  display: none;
+  padding: 10px;
+  background-color: #f0cdcd;
+}
+
+/* Style for the active accordion content */
+button.accordion.active + div {
+  display: block;
+}
+
+/* Style for the headings in the additional data section */
+.additional-data h2 {
+  font-size: 18px;
+  margin-top: 15px;
+  margin-bottom: 10px;
+}
+
+/* Style for the description in the additional data section */
+.additional-data p {
+  margin-bottom: 15px;
+}
+
+/* Style for the list items in the additional data section */
+.additional-data ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* Style for the list item titles in the additional data section */
+.additional-data ul li h3 {
+  font-size: 16px;
+  margin-bottom: 5px;
+}
+
+/* Style for the list item descriptions in the additional data section */
+.additional-data ul li p {
+  margin-bottom: 10px;
+}
+
+/* Style for the price and days */
+.price-days {
+  font-weight: bold;
+  font-size: 12px;
+}
+.imageHighlight{
+  color:#de6c2a;
+}
+.MainInfoFlex{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  @include small-break{
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+  }
+}
+.AboutFlex{
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-direction: column;
+  width: 40%;
+  // border: 1px solid #333;
+  gap: 5px;
+  padding: 20px;
+  background-color: white;
+  color: #997d60;
+  border-radius: 8px;
+  box-shadow: 0 8px 8px rgba(0, 0, 0, 0.1);
+  @include small-break{
+    width: 100%;
+  }
+
+
+}
+.mainInfoDescr{
+  background-color: white;
+  border-radius: 8px;
+  padding: 20px;
+  width: 60%;
+  box-shadow: 0 8px 8px rgba(0, 0, 0, 0.1);
+  @include small-break{
+    width: 100%;
+  }
+}
+.descr{
+  
+  // border: 1px solid red;
+}
+.imageWrapper {
+  list-style: none;
+  color: var(--theme-elevation-0);
+  box-shadow: 0 8px 8px rgba(0, 0, 0, 0.1);
+  padding: 5px;
+  margin: 0;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: row;
+  flex-wrap: wrap;
+  max-width: 230px;
+  min-width: 230px;
+  min-height: 300px;
+  max-height: 200px;
+  overflow: hidden;
+  object-fit: cover;
+  border-radius: 5px;
+  @include mid-break {
+    max-width: 250px;
+    min-height: 320px;
+    max-height: 320px;
+    gap: 5px;
+    flex-wrap: wrap;
+    object-fit: cover;
+  }
+  @include small-break{
+    max-width: 180px;
+  min-width: 200px;
+  min-height: 250px;
+  max-height: 250px;
+  gap: 6px;
+  }
+.AccomodationFlex{
+  display: flex;
+  flex-direction: column;
+  color: red;
+}
+  // @include small-break {
+  //   max-width: 200px;
+  //   min-height: 250px;
+  //   max-height: 250px;
+  //   gap: 5px;
+  //   flex-wrap: wrap;
+  //   gap: 5px;
+  //   overflow: hidden;
+  //   aspect-ratio:  1 / 1;
+  // }
+}
+.priceFlex{
+  display: flex;
+  width: 100%;
+  margin-top: 20px;
+  align-items: center;
+  justify-content: space-between;
+  padding:0 20px 0 20px;
+  color: #333; 
+  border-radius: 10px;
+  background-color: #e99944;
+  @include small-break {
+    padding:0 5px 0 5px;
+    font-size: 16px;
+    
+  }
+}
+// .peoplePrice{
+//   background-color: #e0dfdf;
+// }
+.images li {
+  margin-right: 10px; /* Adjust as needed */
+  margin-bottom: 10px; /* Adjust as needed */
+  list-style: none;
+}
+
+.imageFlex ul{
+  list-style-type: none;
+}
+.images li:last-child {
+  margin-right: 0;
+}
+.titleflash{
+  color: white;
+  font-size: 16px;
+  @include small-break{
+    font-size: 12px;
+  }
+}
+.images {
+  width: 250px; /* Adjust as needed */
+  height: 250px; /* Adjust as needed */
+  object-fit: cover; /* Ensure images maintain aspect ratio */
+  border-radius: 8px;
+  border: 1px solid black;
+  /* Enforce a
+  /* Add border radius for rounded corners */
+}
+.imageFlex{
+  @include small-break {
+    overflow: scroll;
+  }
+}
+.imageFlex::-webkit-scrollbar {
+  display: none; /* Hide scrollbar for webkit browsers */
+}
+
+/* Optional: Hide scrollbar for Firefox */
+.imageFlex {
+  scrollbar-width: none;
+}
+.imageFlex ul{
+  display: flex;
+  width: 100%;
+  padding: 0;
+  justify-content: space-around;
+ 
+
+  @include small-break {
+    grid-template-columns: repeat(2, minmax(50%, 1fr));
+    gap: 5px;
+  }
+
+}
+.itineraryList{
+  list-style: none;
+  padding: 10px;
+}
+.HighlightImg{
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  margin: 20px 0 20px 0;
+  gap: 20px;
+  @include mid-break{
+    overflow: scroll;
+    gap: 4px;
+  }
+  @include small-break{
+    overflow: scroll;
+    gap: 4px;
+   }
+}
+.HighlightImg::-webkit-scrollbar {
+  display: none; /* Hide scrollbar for webkit browsers */
+}
+
+/* Optional: Hide scrollbar for Firefox */
+.HighlightImg {
+  scrollbar-width: none;
+  
+}
+.Img{
+  max-width: 230px;
+  min-width: 230px;
+  min-height: 300px;
+  max-height: 300px;
+  @include small-break{
+    max-width: 200px;
+  min-width: 200px;
+  min-height: 250px;
+  max-height: 250px;
+  }
+}
+.img{
+ object-fit: cover;
+ border-radius: 10px;
+
+ min-width: 230px;
+ aspect-ratio:  2/3;
+ max-width: 300px;
+ @include mid-break{
+  max-width: 200px;
+  gap: 4px;
+ }
+ @include small-break{
+  max-width: 200px;
+  min-width: 200px;
+  gap: 4px;
+ }
+}
+.AccomodationHeader{
+  font-size: 20px;
+  font-weight: 800;
+  color: #e4831b;
+}
+.AccomodationDesrHeading{
+  color: #333;
+  font-weight: 600;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }

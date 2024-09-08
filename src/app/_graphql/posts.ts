@@ -1,6 +1,4 @@
-import { ARCHIVE_BLOCK, CALL_TO_ACTION, CONTENT, MEDIA_BLOCK } from './blocks'
-import { LINK_FIELDS } from './link'
-import { MEDIA } from './media'
+import { ARCHIVE_BLOCK, CALL_TO_ACTION, CONTENT, CONTENT_MEDIA, CONTENT_MEDIA_DOWN, DOUBLE_MEDIA_CONTENT, MEDIA_BLOCK } from './blocks'
 import { META } from './meta'
 
 export const POSTS = `
@@ -28,22 +26,51 @@ export const POST = `
           id
           name
         }
-        hero {
-          type
-          richText
-          links {
-            link ${LINK_FIELDS()}
-          }
-          ${MEDIA}
-        }
         layout {
           ${CONTENT}
           ${CALL_TO_ACTION}
           ${CONTENT}
           ${MEDIA_BLOCK}
           ${ARCHIVE_BLOCK}
+          ${CONTENT_MEDIA}
+          ${DOUBLE_MEDIA_CONTENT}
         }
-        enablePremiumContent
+        Availability,
+        Age,
+        OntopImage{
+          TitleDescription
+          media {
+            imagekit {
+              url
+            }
+          }
+        }
+        MainInfo
+        HighlightImages {
+          title
+          media {
+            imagekit {
+              url
+            }
+          }
+        }
+        Itinary {
+          Heading
+          Description
+          DescriptionImages {
+            media {
+              imagekit {
+                url
+              }
+            }
+          }
+          Accomodation {
+            Accomodation
+            AccomodationDescription
+          }
+        }
+        Days
+        Price
         relatedPosts {
           id
           slug

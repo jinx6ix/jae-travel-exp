@@ -1,6 +1,7 @@
 import { CATEGORIES } from './categories'
+import { FORM_FIELDS } from './form'
 import { LINK_FIELDS } from './link'
-import { MEDIA } from './media'
+import { MEDIA, MEDIA_FIELDS } from './media'
 import { META } from './meta'
 
 export const CALL_TO_ACTION = `
@@ -31,6 +32,7 @@ export const MEDIA_BLOCK = `
 ...on MediaBlock {
   blockType
   invertBackground
+  richText
   position
   ${MEDIA}
 }
@@ -83,3 +85,64 @@ export const ARCHIVE_BLOCK = `
   populatedDocsTotal
 }
 `
+
+export const FORM_BLOCK = `
+...on FormBlock {
+  blockType
+  form {
+    ${FORM_FIELDS}
+  }
+}
+`
+
+export const CONTENT_MEDIA = `
+  ...on ContentMedia{
+    blockType
+    mediaPosition
+    richText
+    media {
+      imagekit {
+        url
+      }
+    }
+  }
+`;
+
+export const DOUBLE_MEDIA_CONTENT = `
+  ... on DoubleMediaContent {
+    blockType
+    mediaContentFields {
+      MoreImages {
+        Images {
+          type
+          TwoImages {
+            media {
+              imagekit {
+                url
+              }
+            }
+            
+          }
+          TrippleImages {
+            media {
+              imagekit {
+                url
+              }
+            }
+            
+          }
+          FourImages {
+            media {
+              imagekit {
+                url
+              }
+            }
+            
+          }
+          
+        }
+        
+      }
+    }
+  }
+`;

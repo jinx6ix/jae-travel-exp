@@ -1,0 +1,119 @@
+.newletterContainer .newsHeaderFlex{
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+}
+.newletterContainer{
+    max-width: 400px;
+
+}
+.submit{
+    width: 100%;
+    margin-top: 5px;
+}
+.newparagraph{
+    font-size: 15px;
+    color: burlywood;
+    text-align: center;
+
+}
+// .safariBooking {
+//     font-family: Arial, sans-serif;
+//     margin-top: 20px;
+//     background-color: white;
+//     padding: 15px 15px;
+//     border-radius: 10px;
+//     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+// }
+
+.bookingContainer {
+    display: flex;
+    justify-content: space-between;
+    
+    align-items: center;
+    /* Adjust spacing as needed */
+}
+.BookingHeader{
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    display: flex;
+    width: 100%;
+    color: #de6c2a;
+}
+.bookingForm {
+    width: 100%; 
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 5px;
+
+}
+
+.formGroup {
+    
+    width: 100%;
+}
+
+.formGroup label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.formGroup input, .formGroup textarea {
+    width: 100%;
+    padding: 10px 40px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #b86c2e;
+    color: white;
+}
+
+.formGroup input::placeholder{
+    color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.formGroup textarea::placeholder{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: white;
+}
+.submitBtn {
+    background-color: #417e9e;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+.submitBtn:hover {
+    background-color: #de6c2a;
+}
+
+// .safariImage {
+//     width: 100%;
+//     min-width: 500px;
+//     min-height: 400px;
+    
+// }
+.FormImage{
+    border-radius: 10px;
+}
+@media screen and (max-width: 768px) {
+    .bookingContainer {
+        flex-direction: column;
+    }
+
+    .bookingForm, .safariImage {
+        width: 100%;
+    }
+}
+.success{
+    color: #0056b3;
+}
+.error{
+    color: red;
+    font-size: 10px;
+}

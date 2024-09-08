@@ -1,0 +1,124 @@
+@use '../../../_css/queries.scss' as *;
+
+.supaviews,
+.supaview,
+.supaerror {
+  border-radius: 10px;
+  margin: 5px;
+  margin-top: 10px;
+
+  padding: 5px;
+  background-color: #ffffff;
+  
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.supaview {
+  margin-top: 20px;
+}
+
+.supaviews {
+  position: relative;
+  width: 900px;
+
+  margin: 15px 15px;
+ 
+  color: #de6c2a;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-repeat: no-repeat;
+
+  @include small-break {
+    width: 300px;
+    margin: 0;
+  }
+}
+
+.formBtn button{
+  padding: 10px 20px;
+  background-color: #e68147;
+  cursor: pointer;
+  border: none;
+  outline: none;
+
+}
+.formBtn button:hover{
+  background-color: #9b4a1c;
+}
+
+.supaview__copy {
+  display: flex;
+  flex-direction: column;
+  margin: 10px 0 10px 0;
+}
+
+.supaview__copy input ::placeholder {
+  color: rgb(0, 0, 0);
+}
+
+.supaview__copy input,
+.supaview__copy textarea {
+  outline: none;
+  padding: 10px;
+  background-color: #ffffff;
+  border: 1px solid rgb(102, 95, 95);
+  border-radius: 10px;
+  margin: 5px 0;
+  color: #000000;
+}
+
+.supaview__title {
+  align-items: center;
+  text-align: center;
+  font-size: 18px;
+}
+
+/* Rating styles */
+.supaview__rating {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.starContainer {
+  position: relative;
+  margin-right: 0.5rem;
+}
+
+.hiddenRadio {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.starLabel {
+  cursor: pointer;
+  
+}
+
+.checked {
+  color: #ffc107;
+  font-size: 30px;
+  transition: .2s ease-in;
+}
+
+.message {
+  margin: 10px 0;
+  padding: 10px;
+}
+
+.submit {
+  border-radius: 10px;
+  max-height: 50px;
+}
+.starContainer::placeholder{
+  color: black;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  
+}
+.supaview__copy::placeholder{
+  color: black;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  
+}

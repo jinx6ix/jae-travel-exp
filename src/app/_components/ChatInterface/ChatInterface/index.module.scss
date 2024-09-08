@@ -1,0 +1,173 @@
+@import '../../../_css/common.scss';
+
+.container {
+  display: flex;
+  z-index: 6000;
+  flex-direction: column;
+  height: 500px;
+  width: 350px;
+  background-color: var(--background-color);
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  position: fixed;
+  bottom: 90px;
+  right: 30px;
+  margin: 0 0 0 10px;
+  scroll-behavior: smooth;
+  @include small-break{
+    width: 100%;
+    right: 0px;
+    height: 90%;
+    top: 0px;
+    border-radius: 0;
+    
+  }
+}
+.Button{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+}
+.Button button{
+  padding: 7px 25px;
+  background-color: var(--bot-message-background-color);
+  color: var(--background-color);
+  margin: 0 20px 0 20px;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+.Button button:hover{
+  background-color: var(--bot-message-background-color);
+  opacity: .6;
+  transition: .2s ease;
+}
+.userMessage{
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  align-items: center;
+}
+.editIcon{
+  font-size: 10px;
+  color: #353131;
+  cursor: pointer;
+  position: absolute;
+  right: 5%;
+  
+  
+}
+.editIcon:hover{
+  
+  scale: 1.1;
+  transition: .2s ease;
+}
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+  background-color: var(--header-background-color);
+  color: var(--header-color);
+  position: relative;
+  overflow: hidden;
+}
+
+
+
+.avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: var(--avatar-background-color);
+  margin-right: 10px;
+  
+}
+.avatarColumn{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.avatarFlex{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+}
+.RefreshBtn{
+  margin-right: 14px;
+  font-weight: 900;
+ 
+  font-size: 24px;
+  cursor: pointer;
+  
+}
+.CloseBtn{
+  margin-left: 10px;
+  font-weight: 900;
+ 
+  font-size: 24px;
+  cursor: pointer;
+}
+.messageContainer {
+  flex: 1;
+  padding: 8px;
+  margin-bottom: 50px;
+  overflow-y: scroll;
+}
+.messageContainer::-webkit-scrollbar {
+  display: none;
+}
+
+.userMessage {
+  background-color: var(--user-message-background-color);
+  color: var(--user-message-color);
+  padding: 10px;
+  border-radius: 10px 10px 0 10px;
+  margin-bottom: 10px;
+  align-self: flex-start;
+  
+}
+
+.botMessage {
+  background-color: var(--bot-message-background-color);
+  color: var(--bot-message-color);
+  padding: 10px;
+  border-radius: 10px 10px 10px 0;
+  margin-bottom: 10px;
+  align-self: flex-end;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+}
+
+.inputContainer {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  background-color: var(--avatar-background-color);
+}
+
+.input {
+  flex: 1;
+  padding: 10px;
+  width: 100%;
+  min-width: 280px;
+  border: none;
+  border-radius: 20px;
+  background-color: var(--input-background-color);
+  outline: none;
+}
+.numberInput {
+  padding: 0.5rem 5px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+.NumberContainer{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 5px 0 5px 0;
+  outline: cadetblue;
+}

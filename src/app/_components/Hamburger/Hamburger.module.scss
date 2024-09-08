@@ -1,0 +1,33 @@
+// Hamburger.module.scss
+.hamburger {
+    display: none;
+    cursor: pointer;
+  
+    @media (max-width: 768px) {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      height: 24px;
+    }
+  }
+  
+  .line {
+    width: 30px;
+    height: 3px;
+    background-color: #333;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .lineOpen {
+    &:nth-child(1) {
+      transform: translateY(10px) rotate(45deg);
+    }
+  
+    &:nth-child(2) {
+      opacity: 0;
+    }
+  
+    &:nth-child(3) {
+      transform: translateY(-10px) rotate(-45deg);
+    }
+  }

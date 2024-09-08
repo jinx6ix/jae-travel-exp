@@ -1,0 +1,85 @@
+@import '../.././_css/common.scss';
+.faqHeader {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* index.module.scss */
+
+.itineraryList {
+  list-style: none;
+  padding: 0;
+}
+
+.accordion {
+  border-top: 1px solid rgb(87, 81, 81);
+  box-shadow: 0 8px 8px rgba(0, 0, 0, 0.1);
+  color: #000000;
+  cursor: pointer;
+  padding: 15px;
+  background-color: white;
+  width: 100%;
+  text-align: left;
+  margin: 2px;
+  border: none;
+  outline: none;
+  transition: 0.2s ease;
+}
+
+.accordion:hover {
+  background-color: #db7439;
+}
+
+.accordion.active {
+  background-color: #db7439;
+}
+
+.accordion p {
+  padding: 10px;
+  background-color: #e4dbdb;
+}
+
+.expandButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  text-align: center;
+  padding: 10px;
+  background-color: #db7439;
+  color: #ffffff;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 20px;
+}
+
+.expandButton:hover {
+  background-color: #b5b4b0;
+}
+
+.FaqFlex {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-around;
+  gap: 10px;
+
+  @include small-break {
+    flex-direction: column;
+  }
+}
+
+.itinaryFlex {
+  width: 50%;
+  @include small-break {
+    width: 100%;
+  }
+}
+
+.image {
+  width: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+}

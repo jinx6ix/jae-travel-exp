@@ -1,0 +1,39 @@
+.scroller {
+  display: flex;
+  overflow-x: hidden;
+  width: 100%;
+}
+
+.cards {
+  display: flex;
+  padding: 0;
+  list-style: none;
+  animation: scrollAnimation 30s linear infinite;
+  transition: .5s;
+}
+
+.card {
+  flex: 0 0 auto;
+  max-width: 500px;
+  min-width: 350px;
+  margin-right: 1rem;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  border: 1px solid #000;
+  background-color: #000;
+  color: #fff;
+}
+
+@keyframes scrollAnimation {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+.review-image img{
+  max-width: 100px;
+  border-radius: 50%;
+}

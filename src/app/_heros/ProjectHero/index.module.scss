@@ -43,7 +43,8 @@
 }
 
 .media {
-  width: 50%;
+  width: 70%;
+  position: relative;
 
   @include mid-break {
     width: 100%;
@@ -51,21 +52,28 @@
 }
 
 .mediaWrapper {
+  margin-top: 15px;
   text-decoration: none;
   display: block;
   position: relative;
-  aspect-ratio: 5 / 4;
+  height: 400px;
+  
   margin-bottom: calc(var(--base) / 2);
-  width: calc(100% + calc(var(--gutter-h) / 2));
+  width: 650px ;
 
   @include mid-break {
     margin-left: calc(var(--gutter-h) * -1);
     width: calc(100% + var(--gutter-h) * 2);
   }
+  @include small-break{
+    display: none;
+  }
 }
 
 .image {
   object-fit: cover;
+  border-radius: 10px;
+  position: relative;
 }
 
 .placeholder {

@@ -2,7 +2,7 @@ import React from 'react'
 
 import { CollectionArchive } from '../../_components/CollectionArchive'
 import { Gutter } from '../../_components/Gutter'
-import RichText from '../../_components/RichText'
+import RichText from '../../_components/RichTextt'
 import { ArchiveBlockProps } from './types'
 
 import classes from './index.module.scss'

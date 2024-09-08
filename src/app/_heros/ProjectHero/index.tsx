@@ -4,16 +4,23 @@ import Link from 'next/link'
 import { Project } from '../../../payload/payload-types'
 import { Gutter } from '../../_components/Gutter'
 import { Media } from '../../_components/Media'
-import RichText from '../../_components/RichText'
 import { formatDateTime } from '../../_utilities/formatDateTime'
 
 import classes from './index.module.scss'
+import ImageSkewHero from '../../_components/ImageHeroSection'
 
 export const ProjectHero: React.FC<{
   project: Project
 }> = ({ project }) => {
-  const { id, title, categories, meta: { image: metaImage, description } = {}, createdAt } = project
-
+  const {
+    id,
+    title,
+    categories,
+    meta: { image: metaImage, description } = {},
+    createdAt,
+    OntopImage,
+  } = project
+  const sanitizedDescription = description?.replace(/\s/g, ' ')
   return (
     <Fragment>
       <Gutter className={classes.projectHero}>
@@ -42,16 +49,12 @@ export const ProjectHero: React.FC<{
               })}
             </div>
           </div>
-          <h1 className={classes.title}>{title}</h1>
-          <div>
-            <p className={classes.description}>
-              {`${description ? `${description} ` : ''}To edit this project, `}
-              <Link href={`${process.env.NEXT_PUBLIC_SERVER_URL}/admin/collections/projects/${id}`}>
-                navigate to the admin dashboard
-              </Link>
-              {'.'}
-            </p>
-          </div>
+          <h2 className={classes.title}>{title}</h2>
+          {description && (
+            <div className={classes.body}>
+              {description && <p className={classes.description}>{sanitizedDescription}</p>}
+            </div>
+          )}
         </div>
         <div className={classes.media}>
           <div className={classes.mediaWrapper}>
@@ -60,10 +63,8 @@ export const ProjectHero: React.FC<{
               <Media imgClassName={classes.image} resource={metaImage} fill />
             )}
           </div>
-          {metaImage && typeof metaImage !== 'string' && metaImage?.caption && (
-            <RichText content={metaImage.caption} className={classes.caption} />
-          )}
         </div>
+        <div>{OntopImage && OntopImage.length > 0 && <ImageSkewHero images={OntopImage} />}</div>
       </Gutter>
     </Fragment>
   )

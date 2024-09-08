@@ -1,0 +1,63 @@
+@import '../_css/common.scss';
+
+.page_404 {
+  padding: 40px 0;
+  background: #fff;
+  font-family: 'Arvo', serif;
+}
+
+.page_404 img {
+  width: 100%;
+  
+ 
+}
+
+.four_zero_four_bg {
+  width: 100%;
+ 
+  background-image: url("https://ik.imagekit.io/6cga8hi9z/JaeTravels/dribbble_1_BgmET-RTuT.gif");
+  height: 400px;
+  background-position: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  min-width: 100%;
+  
+  background-size: cover;
+
+  /* "cover" tells the browser to make sure the image always covers the entire container, in this case html. The browser will cover the container even if it has to stretch the image or cut a little bit off the edges. */
+
+  background-repeat: no-repeat;
+
+  /* The browser can also choose to display your background image as tiles depending on its size. To prevent this from happening, use no-repeat: */
+
+  background-position: center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+}
+
+
+.four_zero_four_bg h1 {
+  font-size: 80px;
+}
+
+.four_zero_four_bg h3 {
+  font-size: 80px;
+}
+
+.link_404 {
+  color: #fff !important;
+  padding: 10px 20px;
+  background: #de6c2a;
+  border-radius: 5px;
+  text-decoration: none;
+  margin: 20px 0;
+  display: inline-block;
+}
+
+.contant_box_404 {
+  margin-top: -50px;
+  
+}

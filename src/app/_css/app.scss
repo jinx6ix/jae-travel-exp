@@ -2,6 +2,8 @@
 @use './colors.scss' as *;
 @use './type.scss' as *;
 @import "./theme.scss";
+@tailwind components;
+@tailwind utilities;
 
 :root {
   --base: 24px;
@@ -10,6 +12,17 @@
 
   --gutter-h: 180px;
   --block-padding: 120px;
+
+
+  --background-color: #f0f0f0;
+  --header-background-color: #de6c2a;
+  --header-color: #fff;
+  --avatar-background-color: #fff;
+  --user-message-background-color: #e6e6e6;
+  --user-message-color: #333;
+  --bot-message-background-color: #de6c2a;
+  --bot-message-color: #fff;
+  --input-background-color: #f0f0f0;
 
   @include large-break {
     --gutter-h: 144px;
@@ -24,11 +37,12 @@
 
 * {
   box-sizing: border-box;
+  scroll-behavior: smooth
 }
 
 html {
   @extend %body;
-  background: var(--theme-bg);
+  background: #f5f5f5;
   -webkit-font-smoothing: antialiased;
   opacity: 0;
 
@@ -51,12 +65,12 @@ body {
 }
 
 ::selection {
-  background: var(--theme-success-500);
+  background: #de6c2a;
   color: var(--color-base-800);
 }
 
 ::-moz-selection {
-  background: var(--theme-success-500);
+  background: #de6c2a;
   color: var(--color-base-800);
 }
 
@@ -68,14 +82,18 @@ img {
 
 h1 {
   @extend %h1;
+  color:#de6c2a;
+  width: fit-content 
 }
 
 h2 {
   @extend %h2;
+  color:#de6c2a;
 }
 
 h3 {
   @extend %h3;
+  color:#de6c2a;
 }
 
 h4 {
@@ -120,4 +138,19 @@ a {
 
 svg {
   vertical-align: middle;
+}
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+.no-visible-scrollbar {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  -webkit-overflow-scrolling: touch;
+}
+
+.no-visible-scrollbar::-webkit-scrollbar {
+  display: none;
 }

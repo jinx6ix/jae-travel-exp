@@ -1,0 +1,8 @@
+.images{
+    display: flex;
+  gap: 5px;
+  overflow-x: scroll;
+}
+.images::-webkit-scrollbar {
+  display: none;
+}

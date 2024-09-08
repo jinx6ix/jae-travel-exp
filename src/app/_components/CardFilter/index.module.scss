@@ -1,0 +1,122 @@
+@import '../../_css/common.scss';
+
+.cardFilterContainer {
+  margin: 20px;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  display: flex;
+  gap: 10px;
+  @include small-break{
+    flex-direction: column;
+  }
+}
+
+.filtersContainer {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+
+.cardsContainer {
+  display: flex;
+  flex-wrap: wrap;
+  // border: 1px solid black;
+  flex-wrap: wrap;
+  width: 100%;
+  gap: 10px;
+}
+
+.wrapperContainer {
+  padding: 10px;
+  @include small-break{
+    padding: 0;
+  }
+
+}
+
+.sortFlex {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  width: 25%;
+  background-color: white;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  @include small-break{
+    width: 100%;
+  }
+
+}
+
+.filterHeader {
+  background-color: #ff9900;
+  color: white;
+  padding: 10px;
+  font-weight: bold;
+}
+
+.filterSection {
+  margin-bottom: 20px;
+}
+
+.filterSectionHeader {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.filterInput {
+  padding: 5px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.destinationsContainer {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.destinationCheckbox {
+  margin-right: 10px;
+}
+
+.rangeContainer {
+  display: flex;
+  align-items: center;
+}
+
+.rangeInput {
+  flex: 1;
+  margin-right: 10px;
+}
+
+.ratingContainer {
+  display: flex;
+  flex-direction: column;
+}
+
+.ratingOption {
+  margin-bottom: 5px;
+}
+
+.cardContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.card {
+  width: 48%;
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin-bottom: 20px;
+}

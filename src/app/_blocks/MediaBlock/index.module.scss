@@ -1,8 +1,35 @@
+@import '../../_css/common.scss';
+
 .mediaBlock {
   position: relative;
+  .gutter {
+    padding: 0 var(--base);
+  }
+}
+
+.mediaContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: var(--base);
+}
+
+.richTextContainer {
+  margin-top: var(--base);
+}
+
+.image {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 10px;
+  min-height: 300px;
+  @include small-break {
+    min-height: 250px;
+  }
 }
 
 .caption {
   color: var(--theme-elevation-500);
-  margin-top: var(--base)
+  margin-top: var(--base);
 }

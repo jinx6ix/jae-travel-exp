@@ -1,0 +1,142 @@
+@import '../../_css/common.scss';
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+
+.mainCont {
+  display: grid;
+  place-items: center;
+  font-family: "Rubik", sans-serif;
+ 
+
+}
+
+.main {
+  width: 50%;
+  min-width: 1000px;
+
+  border-radius: 30px;
+  position: relative;
+  box-shadow: 0 8px 8px 0 rgba(0, 0, 0, 0.1);
+
+  margin: 0;
+  height: 50vh;
+
+  @include small-break {
+    min-width: 300px;
+    max-width: 300px;
+    height: 30vh;
+  
+
+  }
+}
+
+.flexColumn {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 10px;
+  @include small-break{
+    margin-top: 50px !important;
+  }
+}
+
+.firstheader {
+  margin-top: 33px !important;
+  color: white;
+  font-size: 28px;
+  font-weight: 300;
+  margin: 0 30px;
+  @include small-break{
+    font-size: 15px;
+    margin: 0 5px;
+  }
+}
+
+.flexRow {
+  display: flex;
+  gap: 10px;
+
+}
+
+.textPara {
+ 
+  margin:0 30px !important;
+  font-weight: 300;
+  color: #adb9b0;
+  padding-top: 20px;
+
+}
+
+.secondHeader {
+  margin-bottom: 30px !important;
+  color:#f5f5f5;
+  font-size: 55px;
+  font-weight: 800;
+  margin: 0 30px;
+  @include small-break{
+    font-size: 20px;
+    margin: 0 5px;
+  }
+
+}
+
+.main button {
+  padding: 20px 40px;
+  border-radius: 100px;
+  border: none;
+  background-color: #f5f5f5;
+  font-size: 16px;
+  color: black;
+  cursor: pointer;
+  @include small-break{
+    padding: 10px 20px;
+  }
+}
+
+#downloadBtn {
+  border-top-left-radius: 0px;
+  border-bottom-left-radius: 0px;
+  margin-right: 10px;
+  position: relative;
+}
+
+#downloadBtn::before,
+#downloadBtn::after {
+  content: "";
+  position: absolute;
+  height: 60px;
+  width: 30px;
+  background-color: transparent;
+}
+
+#downloadBtn::before {
+  box-shadow: 0 -30px 0 0 #f5f5f5;
+  top: 100%;
+  left: 0;
+  border-top-left-radius: 30px;
+  
+}
+
+#downloadBtn::after {
+  box-shadow: 0 30px 0 0 #f5f5f5;
+  top: -60px;
+  left: 0;
+  border-bottom-left-radius: 30px;
+}
+
+#chameleon {
+  position: absolute;
+  bottom: 0px;
+  right: 0px;
+  height: 390px;
+  width: 600px;
+ 
+  background-repeat: no-repeat;
+  background-size: auto 450px;
+  @include small-break{
+    height: 280px;
+    width: 200px;
+    background-size: auto 200px;
+
+  }
+}

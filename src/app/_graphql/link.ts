@@ -9,6 +9,21 @@ export const LINK_FIELDS = ({ disableAppearance, disableLabel }: Args = {}): str
   type
   newTab
   url
+  icon {
+    imagekit {
+      fileId
+      thumbnailUrl
+      url
+    }
+  }
+  MiniCategories{
+    title
+    subCategories {
+      title
+      CustomUrl
+    }
+    CustomUrl
+  }
   reference {
     relationTo
     value {

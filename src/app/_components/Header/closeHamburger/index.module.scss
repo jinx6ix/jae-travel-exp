@@ -1,0 +1,14 @@
+// CloseButton.module.scss
+.closeButton {
+  position: absolute;
+  top: 28px;
+  right: 20px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.closeIcon {
+  font-size: 54px;
+  color: #333;
+}

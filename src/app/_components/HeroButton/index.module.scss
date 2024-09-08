@@ -1,0 +1,110 @@
+@import '../../_css/common.scss';
+
+.contentSlider {
+  position: relative;
+  height: 85vh;
+  /* Full viewport height */
+  width: 100%;
+  padding: 5px;
+  animation: fadeInUp 1s ease-in-out;
+
+  overflow: hidden;
+  // border: 1px solid black;
+
+  .backgroundImage {
+    position: relative;
+    top: 40%;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    @include mid-break {
+      top: 10%;
+    }
+
+    .content {
+      position: relative;
+      color: white;
+      // text-align: center;
+      // padding: 2rem;
+      // background: rgba(0, 0, 0, 0.5); /* Semi-transparent background for better text readability */
+      // border-radius: 10px;
+      animation: fadeInUp 1s ease-in-out;
+
+
+      .title {
+        color: orangered;
+        font-family: cursive;
+        font-size: 50px;
+        font-weight: 800;
+        animation: fadeInUp 1s ease-in-out;
+        text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+
+        margin-bottom: 1rem;
+        @include mid-break{
+          font-size: 30px;
+        }
+      }
+
+      p {
+        font-size: 1.25rem;
+        margin-bottom: 1.5rem;
+      }
+
+      .btn {
+        display: inline-block;
+        
+        
+        /* Change as needed */
+        color: white;
+        text-decoration: none;
+        border-radius: 5px;
+        transition: background-color 0.3s;
+        text-decoration: none;
+
+    
+      }
+
+      button {
+        padding: 15px 30px;
+
+        background-color: #ff5733;
+        color: white;
+        outline: none;
+        animation: fadeInUp 1s ease-in-out;
+        border: none;
+        border-radius: 10px;
+        @include mid-break{
+          padding: 10px 20px;
+        }
+
+        &:hover {
+          background-color: #c13e1d;
+          transition: .3s ease;
+        }
+
+      }
+
+      button a {
+        text-decoration: none;
+        font-weight: 600;
+      }
+    }
+  }
+}
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

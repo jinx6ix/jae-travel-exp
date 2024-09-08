@@ -4,6 +4,7 @@ import richText from '../../fields/richText'
 
 export const Archive: Block = {
   slug: 'archive',
+  imageURL: 'https://ik.imagekit.io/6cga8hi9z/JaeTravels/image__1__dPHoD5L_fH.png',
   labels: {
     singular: 'Archive',
     plural: 'Archives',
@@ -61,7 +62,7 @@ export const Archive: Block = {
       type: 'number',
       name: 'limit',
       label: 'Limit',
-      defaultValue: 10,
+      defaultValue: 9,
       admin: {
         condition: (_, siblingData) => siblingData.populateBy === 'collection',
         step: 1,

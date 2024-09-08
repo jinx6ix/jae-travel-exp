@@ -1,0 +1,20 @@
+@import '../../_css/common.scss';
+
+.container {
+    text-align: center;
+    width: 100%;
+    
+    margin: 0 auto;
+  }
+  
+  .map {
+    display: block;
+    width: 25em;
+    height: 25em;
+    border-radius: 5px;
+    border: 1px solid rgb(112, 108, 108);
+    @include small-break{
+      width: 100%;
+      height: 15em;
+    }
+  }

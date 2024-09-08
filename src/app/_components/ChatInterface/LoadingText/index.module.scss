@@ -1,0 +1,63 @@
+.canvas {
+    align-items: center;
+   
+    
+    
+    display: flex;
+    height: 40px;
+    justify-content: center;
+    margin: 0em 1em 4px 1em;
+    width: 60px;
+  }
+  .spinner6 {
+    background: #4DB6AC;
+    border-radius: 50%;
+    height: 8px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+    margin: .1em;
+    width: 8px;
+  }
+  
+  .p1 {
+    animation: fall 1s linear .3s infinite;
+  }
+  
+  .p2 {
+    animation: fall 1s linear .2s infinite;
+  }
+  
+  .p3 {
+    animation: fall 1s linear .1s infinite;
+  }
+  
+  .p4 {
+    animation: fall 1s linear infinite;
+  }
+  
+  @keyframes fall {
+    0% {
+      transform: translateY(-15px);
+    }
+  
+    25%,
+    75% {
+      transform: translateY(0);
+    }
+  
+    100% {
+      transform: translateY(-15px);
+    }
+  }
+  
+  /* Spinner 6 ends here */
+  
+  @media (max-width: 600px) {
+    .container {
+      align-items: center;
+      flex-direction: column;
+    }
+  
+    .canvas {
+      margin: 1em;
+    }
+  }

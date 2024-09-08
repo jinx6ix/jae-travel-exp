@@ -1,0 +1,171 @@
+@use '../../_css/queries.scss' as *;
+
+.CardComponent {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  margin: 10px 0;
+
+  @include small-break {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(50%, 1fr));
+    gap: 5px;
+    padding: 0;
+    margin: 0;
+  }
+}
+
+.categoriesText {
+  display: flex;
+  flex-direction: column;
+  color: white;
+
+
+
+}
+
+.categoryHeaderDescr {
+  color: #b8b1b1;
+  font-size: 14px;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+}
+
+.CategoriesDays {
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  gap: 5px;
+}
+
+.freeFormCategory {
+  position: absolute;
+  z-index: 20;
+  bottom: 10px;
+  right: 10px;
+}
+
+.freeImageContainer {
+  position: relative;
+}
+
+.freeImage {
+  position: absolute;
+  z-index: 20;
+  bottom: 10px;
+  right: 5px;
+  width: 150px;
+  top: 16%;
+
+  @include mid-break {
+    display: none;
+  }
+
+  @include small-break {
+    display: none;
+  }
+}
+
+.freeImage0 {
+  position: absolute;
+  z-index: 20;
+  bottom: 10px;
+  left: 5px;
+  width: 150px;
+  top: 16%;
+
+  @include mid-break {
+    display: none;
+  }
+
+  @include small-break {
+    display: none;
+  }
+}
+
+.Text {
+  font-size: 20px;
+  font-weight: 600;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.card {
+  margin: 10px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border: .5px solid rgba(231, 225, 225, 0.952);
+  padding: 3px;
+  border-radius: 10px;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  transition: ease-in-out;
+  position: relative;
+  cursor: pointer;
+
+  @include small-break {
+    border: none;
+  }
+
+}
+
+.card:hover {
+  scale: 1.1;
+  border: 1px solid #b8b1b1;
+  transition: .3s ease;
+
+  @include small-break {
+    scale: 1;
+    border: none;
+  }
+}
+
+.card h3 {
+  margin-top: 10px;
+  /* Adjust as needed */
+}
+
+.image:hover {
+  filter: blur(5px); // Apply blur effect
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); // Semi-transparent overlay
+  }
+}
+
+.image {
+  border-radius: 10px;
+  max-width: 230px;
+  min-height: 200px;
+  max-height: 250px;
+  object-fit: cover;
+  transition: .2s ease;
+
+  @include small-break {
+    max-width: 250px;
+    min-height: 180px;
+    max-height: 180px;
+    min-width: 250px;
+    overflow: hidden;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0;
+  }
+}
+
+.categoryHeader {
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+}

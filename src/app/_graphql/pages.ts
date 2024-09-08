@@ -1,6 +1,4 @@
-import { ARCHIVE_BLOCK, CALL_TO_ACTION, CONTENT, MEDIA_BLOCK } from './blocks'
-import { LINK_FIELDS } from './link'
-import { MEDIA } from './media'
+import { ARCHIVE_BLOCK, CALL_TO_ACTION, CONTENT, CONTENT_MEDIA, CONTENT_MEDIA_DOWN, DOUBLE_MEDIA_CONTENT, MEDIA_BLOCK } from './blocks'
 import { META } from './meta'
 
 export const PAGES = `
@@ -19,22 +17,49 @@ export const PAGE = `
       docs {
         id
         title
-        hero {
-          type
-          richText
-          links {
-            link ${LINK_FIELDS()}
-          }
-          ${MEDIA}
-        }
         layout {
           ${CONTENT}
           ${CALL_TO_ACTION}
           ${CONTENT}
           ${MEDIA_BLOCK}
           ${ARCHIVE_BLOCK}
+          ${CONTENT_MEDIA}
+          ${DOUBLE_MEDIA_CONTENT}
         }
         ${META}
+        Categories{
+          title
+          media {
+            imagekit {
+              url
+            }
+          }
+          Days
+          CustomUrl
+        }
+        Destinations{
+          title
+          media {
+            imagekit {
+              url
+            }
+          }
+          Days
+          CustomUrl
+        }
+        Accordion{
+          Heading
+          Description
+
+        }
+        HighlightImages {
+          title
+          media {
+            imagekit {
+              url
+            }
+          }
+        }
       }
     }
   }

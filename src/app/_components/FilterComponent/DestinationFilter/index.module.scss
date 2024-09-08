@@ -1,0 +1,13 @@
+.Destinationflex{
+    display: flex;
+    flex-direction: column;
+}
+.headerFilter{
+    color: rgb(230, 84, 27);
+    font-size: 20px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.input:focus{
+    border: 1px solid  rgb(252, 118, 8);
+}

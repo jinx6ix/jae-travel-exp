@@ -1,0 +1,39 @@
+.budget-filter {
+  margin-bottom: 20px;
+}
+
+.budget-filter div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.budget-filter input[type="number"] {
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 80px;
+  margin-right: 10px;
+}
+
+.headerFilter {
+  color: rgb(230, 84, 27);
+  font-size: 20px;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.input {
+  padding: 10px;
+  background-color: white;
+  color: black;
+  margin: 5px 0 5px 0;
+  border-radius: 5px;
+  width: 100%;
+  outline: none;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.1);
+  border: .5px solid rgb(167, 162, 162);
+}
+
+.input:focus {
+  border: 1px solid rgb(252, 118, 8);
+}

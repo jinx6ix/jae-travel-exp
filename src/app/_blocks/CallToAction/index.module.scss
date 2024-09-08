@@ -6,28 +6,13 @@ $spacer-h: calc(var(--block-padding) / 2);
   padding-left: $spacer-h;
   padding-right: $spacer-h;
   position: relative;
-  background-color: var(--theme-elevation-100);
-  color: var(--theme-elevation-1000);
+  background-color: #263137;
+  color: white;
+  border: 1px solid wheat;
+  border-radius: 8px;
 }
 
-:global([data-theme="dark"]) {
-  .callToAction {
-    background-color: var(--theme-elevation-0);
-    color: var(--theme-elevation-1000);
-  }
-}
 
-.invert {
-  background-color: var(--theme-elevation-1000);
-  color: var(--theme-elevation-0);
-}
-
-:global([data-theme="dark"]) {
-  .invert {
-    background-color: var(--theme-elevation-900);
-    color: var(--theme-elevation-0);
-  }
-}
 
 .wrap {
   display: flex;

@@ -1,0 +1,111 @@
+@import '../../_css/common.scss';
+
+.doubleMediaContent {
+  margin-bottom: 2rem;
+
+  .contentWrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+
+    @media (min-width: 768px) {
+      flex-direction: row;
+      flex-wrap: wrap;
+    }
+  }
+
+  .mediaContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    width: 100%;
+
+    @media (min-width: 768px) {
+      flex-direction: row;
+      flex-wrap: wrap;
+    }
+    .threeimage{
+      width: 100%;
+      max-width: 320px;
+      min-width: 320px;
+      max-height: 300px;
+      min-height: 300px;
+      object-fit: cover;
+      height: auto;
+      border-radius: 10px;
+      padding: 5px;
+      margin: auto;
+      border-radius: 7px;
+
+      @media (min-width: 768px) {
+        flex: 1 1 calc(50% - 1rem); // Adjusts image width to fit two images per row
+      }
+
+      @media (min-width: 1024px) {
+        flex: 1 1 calc(33.33% - 1rem); // Adjusts image width to fit three images per row
+      }
+
+      @media (min-width: 1280px) {
+        flex: 1 1 calc(33.33% - 1rem); // Adjusts image width to fit four images per row
+      }
+
+
+    }
+    .twoimage{
+      width: 100%;
+      max-width: 500px;
+      min-width: 500px;
+      max-height: 300px;
+      min-height: 300px;
+      object-fit: cover;
+      height: auto;
+      border-radius: 10px;
+      padding: 13px;
+      margin: auto;
+      border-radius: 7px;
+
+      @media (min-width: 768px) {
+        flex: 1 1 calc(50% - 1rem); // Adjusts image width to fit two images per row
+      }
+
+      @media (min-width: 1024px) {
+        flex: 1 1 calc(33.33% - 1rem); // Adjusts image width to fit three images per row
+      }
+
+      @media (min-width: 1280px) {
+        flex: 1 1 calc(25% - 1rem); // Adjusts image width to fit four images per row
+      }
+
+    }
+
+    .image {
+      width: 100%;
+      max-width: 350px;
+      min-width: 350px;
+      max-height: 300px;
+      min-height: 300px;
+      object-fit: cover;
+      height: auto;
+      border-radius: 10px;
+      padding: 13px;
+      margin: auto;
+      border-radius: 7px;
+
+      @media (min-width: 768px) {
+        flex: 1 1 calc(50% - 1rem); // Adjusts image width to fit two images per row
+      }
+
+      @media (min-width: 1024px) {
+        flex: 1 1 calc(25% - 1rem); // Adjusts image width to fit three images per row
+      }
+
+      @media (min-width: 1280px) {
+        flex: 1 1 calc(25% - 1rem); // Adjusts image width to fit four images per row
+      }
+    }
+  }
+}

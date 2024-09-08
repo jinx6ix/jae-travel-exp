@@ -1,0 +1,47 @@
+@import '../../_css/common.scss';
+
+.flex{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    justify-content: flex-start;
+}
+.columnFlex{
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    justify-content: flex-start;
+    flex-direction: column;
+
+}
+.mapContainerStyle{
+    width: 500px;
+    height: 400px;
+    background-color: antiquewhite;
+    border: 1px solid black;
+    padding: 20px;
+}
+.container{
+    display: flex;
+    gap: 20px;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    margin-bottom: 20px;
+    background-color: white;
+    border-radius: 10px;
+    margin-top: 20px;
+    @include small-break{
+        flex-direction: column;
+    }
+}
+.locationLabel{
+    font-size: 20px;
+    color: rgb(221, 132, 16);
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 800;
+}
+.descr{
+    background-color: rgb(224, 116, 38);
+    color: white;
+}

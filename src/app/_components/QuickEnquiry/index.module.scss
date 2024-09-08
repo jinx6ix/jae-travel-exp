@@ -1,0 +1,141 @@
+@use '../../_css/queries.scss' as *;
+
+
+.form {
+    max-width: 650px;
+    min-height: 42vh !important;
+    margin: auto;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    position: relative;
+    
+    @include small-break {
+        width: 100%;
+        min-height: 20vh !important;
+        overflow: hidden;
+        transition: height 0.9s ease-in-out;
+      
+    }
+}
+.toggleForm{
+    display: none;
+    @include small-break{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+       
+    }  
+}
+.toggleForm button{
+    background-color: #273238;
+    border: none;
+    margin-top: 10px;
+    color: #ffffff;
+    padding: 10px;
+    border-radius: 8px;
+    width: 100px;
+    cursor: pointer;
+}
+.toggleForm button:hover{
+    background-color: #b08751;
+    transition: .3s ease;
+    
+}
+
+
+.formGroup {
+margin-bottom: 0px;
+@include small-break{
+    
+
+}
+    
+  }
+  
+  .label {
+    display: block;
+    padding: 0;
+    margin: 0;
+    font-size: 12px;
+    color: #81878a;
+  }
+
+.select {
+    appearance: none; /* Remove default arrow */
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-repeat: no-repeat;
+  
+}
+.QuickFormFlex{
+    width: 100%;
+    display: flex;
+    position: relative;
+    justify-content: space-around;
+    gap: 5px;
+    @include small-break{
+        flex-direction: column;
+        opacity: 1;
+        transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+        transform: translateY(0);
+    }
+}
+.formGroup input{
+    padding: 10px;
+    background-color: #de6c2a;
+    color: white;
+    width: 100%;
+    outline: none;
+    border: none;
+    @include small-break{
+        border-radius: 8px;
+    }
+}
+.formGroup input::placeholder{
+    color: white;
+}
+.QuickFormFlex select{
+    padding: 10px;
+    background-color: #de6c2a;
+    color: white;
+    border-radius: 8px;
+    width: 100%;
+}
+.submitButton {
+    background-color: #58746e;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 10px;
+    width: 80px;
+    margin-top: 10px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: 3s ease;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+.submitButton:hover {
+    background-color: #0056b3;
+}
+.RequestHeader{
+    text-align: center;
+    width: 100%;
+}
+
+.successError{
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    width: 100%;
+   
+}
+
+.success{
+    color: blue;
+}
+.error{
+    color: red;
+}
