@@ -33,6 +33,7 @@
       max-width: 320px;
       min-width: 320px;
       max-height: 300px;
+      position: relative;
       min-height: 300px;
       object-fit: cover;
       height: auto;
@@ -57,6 +58,7 @@
     }
     .twoimage{
       width: 100%;
+      position: relative;
       max-width: 500px;
       min-width: 500px;
       max-height: 300px;
@@ -67,6 +69,10 @@
       padding: 13px;
       margin: auto;
       border-radius: 7px;
+      @include small-break {
+        max-width: 100%;
+        min-width: 300px;
+      }
 
       @media (min-width: 768px) {
         flex: 1 1 calc(50% - 1rem); // Adjusts image width to fit two images per row
@@ -84,6 +90,7 @@
 
     .image {
       width: 100%;
+      position: relative;
       max-width: 350px;
       min-width: 350px;
       max-height: 300px;

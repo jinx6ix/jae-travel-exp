@@ -1,4 +1,3 @@
-// BudgetFilter.tsx
 import React from 'react'
 import './budget.scss'
 interface BudgetFilterProps {
